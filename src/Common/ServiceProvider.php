@@ -28,5 +28,6 @@ final class ServiceProvider extends AbstractServiceProvider
         $container = $this->getLeagueContainer();
         $container->add(Db\DatabaseInterface::class, Db\FileDatabase::class)
             ->addArgument($container->get('config')['database']['filePath']);
+        $container->add(Helper\XmlConverterInterface::class, Helper\XmlConverter::class);
     }
 }
