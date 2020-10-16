@@ -27,15 +27,15 @@ final class MissingDataException extends \BS\Common\Exception\Exception
      */
     public static function noItemsFoundByGivenId(int $id): self
     {
-        return new self(sprintf('No items found by given id %s', $id), 500);
+        return new self(sprintf('No items found by given id %s', $id), 404);
     }
 
     /**
-     * @param int $id
+     * @param string $id
      *
      * @return static
      */
-    public static function missingUrlParam(int $id): self
+    public static function missingUrlParam(string $id): self
     {
         return new self(sprintf('Missing Url Param %s', $id), 500);
     }

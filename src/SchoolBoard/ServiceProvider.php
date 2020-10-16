@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace BS\SchoolBoard;
 
+use BS\Common\Helper\XmlConverterInterface;
 use League\Container\ServiceProvider\AbstractServiceProvider;
 
 /**
@@ -75,7 +76,8 @@ final class ServiceProvider extends AbstractServiceProvider
 
         // strategy
         $container->add(Strategy\Response\Json::class, Strategy\Response\Json::class);
-        $container->add(Strategy\Response\Xml::class, Strategy\Response\Xml::class);
+        $container->add(Strategy\Response\Xml::class, Strategy\Response\Xml::class)
+            ->addArgument(XmlConverterInterface::class);
 
 
         // formatter

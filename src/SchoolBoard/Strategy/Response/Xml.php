@@ -14,6 +14,21 @@ use Psr\Http\Message\ResponseInterface;
 final class Xml implements GeneratorInterface
 {
     /**
+     * @var \BS\Common\Helper\XmlConverterInterface
+     */
+    private $xmlConverter;
+
+    /**
+     * Xml constructor.
+     *
+     * @param \BS\Common\Helper\XmlConverterInterface $xmlConverter
+     */
+    public function __construct(\BS\Common\Helper\XmlConverterInterface $xmlConverter)
+    {
+        $this->xmlConverter = $xmlConverter;
+    }
+
+    /**
      * Get Response
      *
      * @param \stdClass $formattedObject formatted object
@@ -22,6 +37,7 @@ final class Xml implements GeneratorInterface
      */
     public function getResponse(\stdClass $formattedObject): ResponseInterface
     {
-        return new XmlResponse($formattedObject);
+        $xml = $this->xmlConverter->convert($formattedObject);
+        return new XmlResponse($xml);
     }
 }

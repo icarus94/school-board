@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace BS\SchoolBoard\Service;
 
+use BS\SchoolBoard\Exception\MissingDataException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -61,7 +62,11 @@ final class Student implements StudentInterface
      */
     public function getStudentStatistics(ServerRequestInterface $request, array $args): ResponseInterface
     {
-        $student = $this->repository->getStudentById((int) $args['id']);
+        $idUrlParam = ((int)$args['id']) ?? false;
+        if (!$idUrlParam) {
+            throw MissingDataException::missingUrlParam('id');
+        }
+        $student = $this->repository->getStudentById($idUrlParam);
         $resultCalculator = $this->resultFactoryMethod->make($student->getSchoolBoard());
         $result = $resultCalculator->getResult($student);
         $formattedObject = $this->formatter->format($student, $result);

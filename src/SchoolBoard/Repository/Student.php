@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace BS\SchoolBoard\Repository;
 
+use BS\SchoolBoard\Exception\MissingDataException;
+
 /**
  * Class Student
  *
@@ -44,6 +46,9 @@ final class Student implements StudentInterface
     public function getStudentById(int $id): \BS\SchoolBoard\Entity\StudentInterface
     {
         $data = $this->database->getStudentsById($id);
+        if (count($data) === 0) {
+            throw MissingDataException::noItemsFoundByGivenId($id);
+        }
         return $this->studentFactoryMethod->make($data);
     }
 }

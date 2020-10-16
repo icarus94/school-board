@@ -24,6 +24,11 @@ require 'vendor/autoload.php';
     } catch (Throwable $throwable) {
         if ($throwable instanceof Psr\Container\NotFoundExceptionInterface) {
             $response = new \Laminas\Diactoros\Response\JsonResponse(['result' => 'not found'], 404);
+        } elseif ($throwable instanceof \BS\Common\Exception\Exception) {
+            $response = new \Laminas\Diactoros\Response\JsonResponse(
+                ['result' => $throwable->getMessage()],
+                $throwable->getCode()
+            );
         } else {
             $response = new \Laminas\Diactoros\Response\JsonResponse(['result' => $throwable->getMessage()], 500);
         }
