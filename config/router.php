@@ -7,6 +7,14 @@ return static function (\Psr\Container\ContainerInterface $container): \Psr\Http
 
     $router->setStrategy($strategy);
 
+    $router->map(
+        'GET',
+        '/student/{id:number}',
+        [
+            \BS\SchoolBoard\Service\StudentInterface::class,
+            'getStudentStatistics'
+        ]
+    );
 
     return $router;
 };
