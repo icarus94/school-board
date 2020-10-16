@@ -38,4 +38,3 @@ final class Grades implements GradesInterface
         return new \BS\SchoolBoard\Entity\Grades($marks);
     }
 }
-

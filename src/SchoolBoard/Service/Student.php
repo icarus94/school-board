@@ -62,11 +62,10 @@ final class Student implements StudentInterface
      */
     public function getStudentStatistics(ServerRequestInterface $request, array $args): ResponseInterface
     {
-        $idUrlParam = ((int)$args['id']) ?? false;
-        if (!$idUrlParam) {
+        if (!isset($args['id'])) {
             throw MissingDataException::missingUrlParam('id');
         }
-        $student = $this->repository->getStudentById($idUrlParam);
+        $student = $this->repository->getStudentById((int) $args['id']);
         $resultCalculator = $this->resultFactoryMethod->make($student->getSchoolBoard());
         $result = $resultCalculator->getResult($student);
         $formattedObject = $this->formatter->format($student, $result);

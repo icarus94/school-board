@@ -45,12 +45,12 @@ final class Student implements StudentInterface
      */
     public function make(array $data): \BS\SchoolBoard\Entity\StudentInterface
     {
-        if (!isset($data['id']) || !$data['id'] || !is_numeric($data['id'])) {
+        if (!isset($data['id']) || !is_numeric($data['id'])) {
             throw MissingDataException::missingData('id');
         }
-        $id = $data['id'];
+        $id = (int) $data['id'];
 
-        if (!isset($data['name']) || !$data['id'] || !is_string($data['name'])) {
+        if (!isset($data['name']) || !is_string($data['name'])) {
             throw MissingDataException::missingData('id');
         }
         $name = $data['name'];

@@ -35,7 +35,7 @@ final class FileDatabase implements DatabaseInterface
     public function getStudentsById(int $id): array
     {
         $jsonFile = file_get_contents($this->filePath);
-        $jsonData = json_decode($jsonFile, true);
+        $jsonData = json_decode((string) $jsonFile, true);
         foreach ($jsonData as $item) {
             if ($item['id'] === $id) {
                 return $item;

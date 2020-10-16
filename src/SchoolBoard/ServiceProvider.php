@@ -84,4 +84,3 @@ final class ServiceProvider extends AbstractServiceProvider
         $container->add(Formatter\ResultInterface::class, Formatter\Result::class);
     }
 }
-

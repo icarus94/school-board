@@ -35,7 +35,7 @@ final class Grades implements GradesInterface
      * Return the current element
      *
      * @link https://php.net/manual/en/iterator.current.php
-     * @return mixed Can return any type.
+     * @return int
      */
     public function current(): int
     {
@@ -57,7 +57,7 @@ final class Grades implements GradesInterface
      * Return the key of the current element
      *
      * @link https://php.net/manual/en/iterator.key.php
-     * @return string|float|int|bool|null scalar on success, or null on failure.
+     * @return int
      */
     public function key(): int
     {
@@ -73,7 +73,7 @@ final class Grades implements GradesInterface
      */
     public function valid(): bool
     {
-        return isset($this->items[$this->index]);
+        return isset($this->grades[$this->index]);
     }
 
     /**
