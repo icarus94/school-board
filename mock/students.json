@@ -1,0 +1,298 @@
+[
+    {
+        "id": 1,
+        "name": "Miller Tocque",
+        "grades": [
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 2,
+        "name": "Sherlock Dubber",
+        "grades": [
+            {
+                "mark": 10
+            },
+            {
+                "mark": 9
+            },
+            {
+                "mark": 5
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 3,
+        "name": "Stafani Crossgrove",
+        "grades": [
+            {
+                "mark": 10
+            },
+            {
+                "mark": 9
+            },
+            {
+                "mark": 7
+            },
+            {
+                "mark": 6
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 4,
+        "name": "Lacie Ketchell",
+        "grades": [
+            {
+                "mark": 10
+            },
+            {
+                "mark": 10
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 5,
+        "name": "Corny O'Hagan",
+        "grades": [
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 6,
+        "name": "Kerwin Setchfield",
+        "grades": [
+            {
+                "mark": 10
+            },
+            {
+                "mark": 6
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 7,
+        "name": "Jacquenetta Tolcher",
+        "grades": [
+            {
+                "mark": 5
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 8,
+        "name": "Augusta Strelitzer",
+        "grades": [
+            {
+                "mark": 8
+            },
+            {
+                "mark": 5
+            },
+            {
+                "mark": 5
+            },
+            {
+                "mark": 9
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 9,
+        "name": "Wendye Maffini",
+        "grades": [
+            {
+                "mark": 5
+            },
+            {
+                "mark": 10
+            },
+            {
+                "mark": 6
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 10,
+        "name": "Barton Hryskiewicz",
+        "grades": [
+            {
+                "mark": 8
+            },
+            {
+                "mark": 7
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 11,
+        "name": "Phillida Jeske",
+        "grades": [
+            {
+                "mark": 8
+            },
+            {
+                "mark": 6
+            },
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 12,
+        "name": "Ely Ivanonko",
+        "grades": [
+            {
+                "mark": 6
+            },
+            {
+                "mark": 7
+            },
+            {
+                "mark": 10
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 13,
+        "name": "Cissy Hazelby",
+        "grades": [
+            {
+                "mark": 5
+            },
+            {
+                "mark": 5
+            },
+            {
+                "mark": 5
+            },
+            {
+                "mark": 6
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 14,
+        "name": "Bartolomeo Bartolomeazzi",
+        "grades": [
+            {
+                "mark": 5
+            },
+            {
+                "mark": 6
+            },
+            {
+                "mark": 7
+            },
+            {
+                "mark": 7
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 15,
+        "name": "Maurine Smorfit",
+        "grades": [
+            {
+                "mark": 9
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 16,
+        "name": "Bent Huntress",
+        "grades": [
+            {
+                "mark": 10
+            }
+        ],
+        "school_board": "CSMB"
+    },
+    {
+        "id": 17,
+        "name": "Hoyt Letten",
+        "grades": [
+            {
+                "mark": 9
+            },
+            {
+                "mark": 7
+            },
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 18,
+        "name": "Abbe Schimaschke",
+        "grades": [
+            {
+                "mark": 7
+            },
+            {
+                "mark": 9
+            },
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 19,
+        "name": "Arnie Janku",
+        "grades": [
+            {
+                "mark": 5
+            },
+            {
+                "mark": 10
+            },
+            {
+                "mark": 10
+            }
+        ],
+        "school_board": "CSM"
+    },
+    {
+        "id": 20,
+        "name": "Eileen Slide",
+        "grades": [
+            {
+                "mark": 9
+            },
+            {
+                "mark": 8
+            },
+            {
+                "mark": 8
+            },
+            {
+                "mark": 8
+            }
+        ],
+        "school_board": "CSM"
+    }
+]

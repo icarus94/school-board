@@ -1,0 +1,47 @@
+{
+    "name": "ntrajkovic/school-board",
+    "description": "School Board System",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ntrajkovic",
+            "email": "icarusrevolution88@gmail.com"
+        }
+    ],
+    "config": {
+        "sort-packages": true,
+        "cache-files-ttl": 0,
+        "process-timeout": 0
+    },
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "jms/serializer": "^3.9",
+        "laminas/laminas-diactoros": "^2.4",
+        "laminas/laminas-httphandlerrunner": "^1.2",
+        "league/container": "^3.3",
+        "league/route": "^4.5",
+        "psr/container": "^1.0",
+        "psr/http-message": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11",
+        "phpstan/phpstan-phpunit": "^0.11",
+        "phpstan/phpstan-strict-rules": "^0.11",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^2.9.2",
+        "symfony/var-dumper": "^5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BS\\Common\\": "src/Common",
+            "BS\\SchoolBoard\\": "src/SchoolBoard"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "analyze": "php vendor/bin/phpstan analyze --memory-limit=2048m src/ -l 7 --configuration phpstan.installer.neon",
+        "serve": "php -S 0.0.0.0:8080 -t public/"
+    }
+}
